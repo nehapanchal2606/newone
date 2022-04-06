@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Student</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet"
+          href="{% static 'adminResources/css/flag-icon.min.css' %}">
+    <link rel="stylesheet"
+          href="{% static 'adminResources/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet"
+          href="{% static 'adminResources/css/font-awesome.min.css' %}">
+    <link rel="stylesheet"
+          href="{% static 'adminResources/css/simple-line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'adminResources/css/feather.css' %}">
+    <link rel="stylesheet"
+          href="{% static 'adminResources/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet"
+          href="{% static 'adminResources/css/bootstrap-datepicker.min.css' %}">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'adminResources/css/style.css' %}">
+    <!-- endinject -->
+    <link rel="shortcut icon"
+          href="{% static 'adminResources/image/favicon.ico' %}"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+    {% include 'header.html' %}
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+
+        {% include 'menu.html' %}
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="card-header"
+                         style="background: linear-gradient(90deg, #464de4, transparent);">
+                        <h4 class="m-0 text-white">View Subject</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <button class="btn btn-primary"><a href="/addsub/">ADD SUBJECT</a></button>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table id="order-listing" class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Subject Code</th>
+                                            <th>Degree</th>
+                                            <th>Department</th>
+                                            <th>Semester No</th>
+                                            <th>Subject Name</th>
+                                            <th>Subject Textbook</th>
+                                            <th>Subject Image3</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for val in s %}
+                                        <tr>
+                                            <td><strong>{{val.deg_id.name}}</strong></td>
+                                            <td>{{val.dep_id.dep_name}}</td>
+                                            <td>{{val.sem_id.sem_number}}</td>
+                                            <td>{{val.sub_name}}</td>
+                                            <td>{{val.sub_code}}</td>
+                                            <td>{{val.sub_textbook}}</td>
+                                            <td><img src="{% static '/adminResources/image/' %}{{val.img}}"></td>
+                                            <td><button class="btn btn-success"><a href="/sub_edit/{{val.id}}/">Edit</a></button>
+                                                <button class="btn btn-danger"><a href="/sub_delete/{{val.id}}/">Delete</a> </button></td>
+
+                                        </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            {% include 'footer.html' %}
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="{% static 'adminResources/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="{% static 'adminResources/js/off-canvas.js' %}"></script>
+<script src="{% static 'adminResources/js/hoverable-collapse.js' %}"></script>
+<script src="{% static 'adminResources/js/template.js' %}"></script>
+<script src="{% static 'adminResources/js/settings.js' %}"></script>
+<script src="{% static 'adminResources/js/todolist.js' %}"></script>
+<!-- endinject -->
+<script src="{% static 'adminResources/js/jquery.validate.min.js"></script>
+<script src="{% static 'adminResources/js/bootstrap-maxlength.min.js"></script>
+<!-- Custom js for this page-->
+<script src="{% static 'adminResources/js/form-validation.js' %}"></script>
+<script src="{% static 'adminResources/js/bt-maxLength.js' %}"></script>
+<script src="{% static 'adminResources/js/file-upload.js' %}"></script>
+<script src="{% static 'adminResources/js/bootstrap-datepicker.min.js' %}"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>

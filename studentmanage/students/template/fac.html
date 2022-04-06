@@ -1,0 +1,60 @@
+{% extends 'header1.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="bg1 p-t-29 p-b-29">
+            <div class="container">
+                <div class="flex-w">
+                    <span>
+                        <a href="/student/show/" class="s-txt21 hov-color-main trans-02">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a>
+                        <span class="s-txt21 p-l-6 p-r-9">/</span>
+                    </span>
+                    
+                    <span>
+                        <span class="s-txt21">
+                            {{f.fn}}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <section class="p-t-63 p-b-50">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-7 col-lg-8 p-b-30">
+                        <div>
+                            <h4 class="m-txt21 p-b-22">
+                                {{f.fn}}
+                            </h4>
+                            <span class="s-txt22 dis-block p-b-19">
+                                {{f.qualification}}
+                            </span>
+                            <span class="s-txt22 dis-block p-b-19">
+                                {{f.experience}} Years Experience in This Subject
+                            </span>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 p-b-30">
+                        <div class="block-5 p-t-7">
+                            <div class="wrap-pic-b5 wrap-pic-w bo2">
+                                <img src="{% static 'adminResources/image/' %}{{f.image}}" alt="IMG-INSTRUCTOR" />
+                            </div>
+                            <div class="wrap-text-b5 p-t-18">
+                                <span class="dis-block s-txt14">
+                                    Phone: {{f.number}}
+                                </span>
+                                <span class="dis-block s-txt14"> Email: {{f.email}} </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+  {% endblock %}

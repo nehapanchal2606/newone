@@ -1,0 +1,60 @@
+{% extends 'header1.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="bg1 p-t-29 p-b-29">
+            <div class="container">
+                <div class="flex-w">
+                    <span>
+                        <a href="/student/show/" class="s-txt21 hov-color-main trans-02">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a>
+                        <span class="s-txt21 p-l-6 p-r-9">/</span>
+                    </span>
+                    <span>
+                        <span class="s-txt21">
+                            Login
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <section class="p-t-65 p-b-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-lg-8 p-b-50">
+                        <div>
+                            <h3 class="m-txt28 rs1-color p-b-40">
+                                Send Us a Message
+                            </h3>
+                            <h5>
+                                {% if messages %}
+                                    {% for val in messages %}
+                                        {{val}}
+                                    {% endfor %}
+                                {% endif %}
+                            </h5>
+                            <form method="post" action="/students/stu_login/" >
+                                {% csrf_token %}
+                                <div class="size25 w-full-lg m-b-20 validate-input" data-validate="Valid email is: ex@abc.xyz">
+                                    <input class="s-txt31 size-full cl-ph-1 bo6 input-focus-1 bo-rad-2 p-l-18 p-r-18" type="email" name="email" placeholder="Your Email" />
+                                </div>
+                                <div class="size25 w-full-lg m-b-20">
+                                    <input class="s-txt31 size-full cl-ph-1 bo6 input-focus-1 bo-rad-2 p-l-18 p-r-18" type="password" name="password" placeholder="Phone number" />
+                                </div>
+ 
+                                <div>
+                                    <button type="submit" class="btn-drive m-txt1 size26 bg-main hov-color-white bo-rad-4">
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+{% endblock %}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <!-- Mirrored from freebw.com/templates/drive/show.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2022 06:28:43 GMT -->
+    <!-- Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!-- /Added by HTTrack -->
+    <head>
+        <title>Homepage 1</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="AuCreative theme tempalte" />
+        <meta name="author" content="AuCreative" />
+        <meta name="keywords" content="AuCreative theme template" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/elegant-font/html-css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/revolution/css/layers.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/revolution/css/navigation.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/revolution/css/settings.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/slick/slick.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/lightbox2/css/lightbox.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/dist/css/animsition.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}" />
+    </head>
+    <body class="animsition restyle-index">
+        <header>
+            <div class="container-menu-desktop">
+                <div class="top-bar bg-main">
+                    <div class="container">
+                        <div class="content-topbar">
+                            <div class="left-top-bar">
+                                
+                            </div>
+                            <div class="right-top-bar">
+                                <span>
+                                    <i class="icon_phone" aria-hidden="true"></i>
+                                    <span>1-800-123-6889</span>
+                                </span>
+                                <span>
+                                    <i class="icon_pin" aria-hidden="true"></i>
+                                    <span>8th floor, 379 Hudson St, New York</span>
+                                </span>
+                                <span>
+                                    <i class="icon_clock" aria-hidden="true"></i>
+                                    <span>09:30 am – 06:00 pm</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-menu-desktop">
+                    <div class="limiter-menu-desktop">
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'images/icons/1000_F_215861024_bZSrynxGm9ZSz3bhjKBkRk78aZX6zyzQ.jpg' %}" alt="IMG-LOGO" />
+                        </a>
+                        <div class="menu-desktop">
+                            <ul class="main-menu">
+                                <li>
+                                    <a href="/students/show/">Home</a>
+                                </li>
+                                <li>
+                                    <a>Courses</a>
+                                    <ul class="sub-menu">
+                                        {% for val in d %}
+                                        <li><a href="/students/degdet/{{val.id}}/">{{val.name}}</a></li>
+                                        {% endfor %}
+                                    </ul> 
+                                </li>
+                                <li>
+                                    <a href="/students/teacher/">Teachers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-header-mobile">
+                <a href="index.html" class="logo-mobile">
+                    <img src="{% static 'images/icons/1000_F_215861024_bZSrynxGm9ZSz3bhjKBkRk78aZX6zyzQ.jpg' %}" alt="IMG-LOGO" />
+                </a>
+                <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="menu-mobile">
+                <ul class="topbar-mobile">
+                    <li class="bo1-b p-t-8 p-b-8">
+                        <div class="left-top-bar p-l-7">
+                            <a href="#">Search</a>
+                            <a href="#">About</a>
+                            <a href="#">Blog</a>
+                            <a href="#">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="right-top-bar bo1-b p-t-8 p-b-8">
+                        <span>
+                            <i class="icon_phone" aria-hidden="true"></i>
+                            <span>1-800-123-6889</span>
+                        </span>
+                    </li>
+                    <li class="right-top-bar bo1-b p-t-8 p-b-8">
+                        <span>
+                            <i class="icon_pin" aria-hidden="true"></i>
+                            <span>8th floor, 379 Hudson St, New York</span>
+                        </span>
+                    </li>
+                    <li class="right-top-bar bo1-b p-t-8 p-b-8">
+                        <span>
+                            <i class="icon_clock" aria-hidden="true"></i>
+                            <span>09:30 am – 06:00 pm</span>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="main-menu-m bg-main">
+                    <li class="bg-main">
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="index.html">Homepage V1</a></li>
+                            <li><a href="home-02.html">Homepage V2</a></li>
+                            <li><a href="home-03.html">Homepage V3</a></li>
+                        </ul>
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="bg-main">
+                        <a href="course-list.html">Courses</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="course-list.html">Course List</a></li>
+                            <li><a href="course-grid.html">Course Grid</a></li>
+                            <li><a href="course-detail.html">Course Detail</a></li>
+                        </ul>
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="bg-main">
+                        <a href="about-team.html">Teachers</a>
+                    </li>
+                    <li class="bg-main">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+                        </ul>
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="bg-main">
+                        <a href="blog.html">Blog</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="blog-single.html">Blog Single</a></li>
+                        </ul>
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="bg-main">
+                        <a href="about.html">About</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="about-team.html">About Team Member</a></li>
+                        </ul>
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="bg-main">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        {% block content %} {% endblock %}
+        <!-- <div class="map">
+            <div class="contact-map h-size1" id="google_map" data-map-x="40.648578" data-map-y="-73.962730" data-pin="{% static 'images/icons/favicon.png/' %}" data-scrollwhell="0" data-draggable="1" data-zoom="15"></div>
+        </div> -->
+        <footer class="bg4 p-t-25">
+            <div class="container p-b-60">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3 p-t-30">
+                        <h4 class="m-txt12 p-t-14">
+                            ABOUT CAREER
+                        </h4>
+                        <p class="s-txt9 p-t-30">
+                            This is probably one of the most difficult decisions you will have to take. Your future depends on what you choose today as your career. In the present scenario, there are so many options that the choice has become all the more tough. However, the first step to choosing a career is deciding the subject you wish to study. This blog will help you decide the subject as per your career goals, so that you can make an informed decision.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 p-t-30">
+                        <h4 class="m-txt12 p-t-14">
+                            Company
+                        </h4>
+                        <div class="wrap-link-footer p-t-28">
+                            <ul class="col-left">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Courses</a></li>
+                                <li><a href="#">Teachers</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="col-right">
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="#">404 page</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Elements</a></li>
+                                <li><a href="#">Typography</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg3 txt-center p-t-19 p-b-16">
+                <span class="s-txt10">@ 2018 AuThemes.</span>
+                <a href="https://themeforest.net/cart/add_items?item_ids=21207623" class="dis-inline s-txt11 hov-color-white trans-04">Get The Template</a>
+            </div>
+        </footer>
+        <div class="btn-back-to-top hov-bg-main" id="myBtn">
+            <span class="symbol-btn-back-to-top">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </span>
+        </div>
+        <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+        <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'vendor/wow/wow.min.js' %}"></script>
+        <script src="{% static 'vendor/animsition/dist/js/animsition.min.js' %}"></script>
+        <script src="{% static 'vendor/slick/slick.min.js' %}"></script>
+        <script src="{% static 'js/slick-custom.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/popper.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+        <script src="{% static 'vendor/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+        <script src="{% static 'js/slide-custom.js' %}"></script>
+        <script src="{% static 'vendor/lightbox2/js/lightbox.min.js' %}"></script>
+        <script src="{% static 'vendor/parallax100/parallax100.js' %}"></script>
+        <script>
+            $(".parallax100").parallax100();
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+        <script src="{% static 'js/map-custom.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+    <!-- Mirrored from freebw.com/templates/drive/show.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2022 06:29:01 GMT -->
+</html>
